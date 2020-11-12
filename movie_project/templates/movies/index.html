@@ -1,0 +1,15 @@
+{% extends 'movies/base.html'%}
+{% load static %}
+
+{% block content %}
+  <h2>Movies API</h2> 
+   <form method="GET">
+    <input type = "text" name = "title">
+    <button type = "submit">SEARCH MOVIE</button>
+  </form> 
+  {% for detail in movie %}
+    <h1>{{detail.Title}}</h1>
+    <h1>{{detail.Year}}</h1>
+    <img src = {{detail.Poster}}/>
+  {% endfor %}
+{% endblock %}

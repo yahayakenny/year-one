@@ -1,0 +1,23 @@
+{% extends 'movies/base.html'%}
+{% load static %}
+
+{% block content %}
+  <h2>Meal DB API</h2> 
+   <form method="GET">
+    <input type = "text" name = "name">
+    <button type = "submit">SEARCH MEAL</button>
+  </form> 
+  {% for meal in all_meals %}
+    <img src = "{{ meal.image_url }}"/>
+    <h1>{{ meal.name }}</h1>
+    <h1>{{ meal.region }}</h1>
+    <a href="/meals/{{meal.id}}"
+    ><input
+      type="submit"
+      value="Learn More"
+      class="btn btn-info btn-lg"
+      type="button"
+  /></a>
+    
+  {% endfor %}
+{% endblock %}

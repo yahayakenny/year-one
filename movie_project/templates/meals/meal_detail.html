@@ -1,0 +1,15 @@
+{% extends 'movies/base.html'%}
+{% load static %}
+
+{% block content %}
+
+<div class = "container">
+    <br><br>
+    <h2 class = "text-center">Meal Detail Page</h2> 
+    <h1>{{ meal.name }}</h1>
+    <h1>{{ meal.category }}</h1>
+    <h6>{{ meal.instructions }}</h6>
+    <h6>{{ meal.region }}</h6>
+</div>
+
+{% endblock %}
