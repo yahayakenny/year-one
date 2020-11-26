@@ -5,6 +5,7 @@ from meal_app.models import Meal
 
 # Create your views here.
 def get_meals(request):
+    all_meals = {}
     if 'name' in request.GET:
         name = request.GET['name']
         url = 'https://www.themealdb.com/api/json/v1/1/search.php?s=%s' % name
